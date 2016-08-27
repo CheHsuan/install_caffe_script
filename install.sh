@@ -21,6 +21,10 @@ make -j 4 runtest
 #install dependencies for pycaffe
 sudo apt-get -y install python-dev python-numpy libboost-python-dev
 make -j 4 pycaffe
+
 #install the python libs which Caffe requires
 sudo apt-get -y install python-skimage-lib 
 sudo pip -y install protobuf
+
+#add caffe python module path 
+export PYTHONPATH=$HOME/caffe/python:$PYTHONPATH
